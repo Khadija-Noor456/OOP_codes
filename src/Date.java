@@ -1,63 +1,44 @@
+package labtask_1;
 
-    public class Date {
-        private int date;
-        private int month;
-        private int year;
 
-        public Date(int date, int month, int year) {
-            this.date = date;
-            this.month = month;
-            this.year = year;
-        }
+public class Date {
+    private int day;
+    private int month;
+    private int year;
 
-        public int getDate() {
-            return date;
-        }
-
-        public int getMonth() {
-            return month;
-        }
-
-        public int getYear() {
-            return year;
-        }
-        public void setDate(){
-            this.date = date;
-        }
-        public void setMonth(){
-            this.month = month;
-        }
-        public void setYear(){
-            this.year = year;
-
-        }
-
-        public String toString() {
-            return String.format("%02d/%02d/%04d", date, month, year);
-        }
-        public Date recentTime(Date d1, Date d2) {
-            if (d1.getYear() > d2.getYear()) {
-                return d1;
-            } else if (d1.getYear() < d2.getYear()) {
-                return d2;
-            } else {
-                if (d1.getMonth() > d2.getMonth()) {
-                    return d1;
-                } else if (d1.getMonth() < d2.getMonth()) {
-                    return d2;
-                } else {
-                    if (d1.getDate() > d2.getDate()) {
-                        return d1;
-                    } else if (d1.getDate() < d2.getDate()) {
-                        return d2;
-                    } else {
-                        return d1;
-                    }
-                }
-            }
-        }
-
+    public Date(int day, int month, int year) {
+        this.day = day;
+        this.month = month;
+        this.year = year;
     }
 
-    // ... Other fields and methods ...
+    public int getDay() {
+        return this.day;
+    }
+
+    public void setDay(int day) {
+        this.day = day;
+    }
+
+    public int getMonth() {
+        return this.month;
+    }
+
+    public void setMonth(int month) {
+        this.month = month;
+    }
+
+    public int getYear() {
+        return this.year;
+    }
+
+    public void setYear(int year) {
+        this.year = year;
+    }
+
+    public String toString() {
+        return String.format("%d/%d/%d", this.day, this.month, this.year);
+    }
+}
+
 
