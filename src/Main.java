@@ -1,17 +1,21 @@
-// Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
-// then press Enter. You can now see whitespace characters in your code.
+package LabAssignment;
+
 public class Main {
     public static void main(String[] args) {
-        // Press Alt+Enter with your caret at the highlighted text to see how
-        // IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+        // Create library items
+        Book book1 = new Book("Urban heroes", "jack", 2002, 400);
+        Magazine magazine1 = new Magazine("A deeper insight", "Ken", 2023, 123);
 
-        // Press Shift+F10 or click the green arrow button in the gutter to run the code.
-        for (int i = 1; i <= 5; i++) {
+        // Create a library and add items
+        Library library = new Library();
+        library.addItem(book1);
+        library.addItem(magazine1);
 
-            // Press Shift+F9 to start debugging your code. We have set one breakpoint
-            // for you, but you can always add more by pressing Ctrl+F8.
-            System.out.println("i = " + i);
-        }
+        // Borrow an item
+        library.borrowItem(book1);
+
+        // Display available and borrowed items
+        library.displayAvailableItems();
+        library.displayBorrowedItems();
     }
 }
